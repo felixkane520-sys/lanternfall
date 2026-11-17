@@ -1,3 +1,10 @@
+// Lanternfall — a lantern-keeper arena survival game, entered in make.fun's best-game-01.
+// The keeper holds the paper night sky over a sleeping town until dawn: eight waves of ember
+// sprites, a boss every fourth wave, and light-seed shots steered by mouse and keys. This
+// entrypoint is the game's handover program: it stages the static game/ folder and the
+// screenshots/ renders into the output directory and writes the dossier the judge reads.
+// Everything the game needs is vendored beside this file; nothing is fetched at run time.
+//
 // A working best-game-01 entry (Node 22, standard library only): the game is this directory's
 // game/ folder, plain static files a desktop browser loads offline (game/index.html and its ES
 // modules, no library and no network request), and the program hands it in. It copies game/ and
@@ -39,3 +46,5 @@ writeFileSync(
     game_path_max_bytes: 1000,
   }),
 );
+
+console.log('Lanternfall handed in: game/ and screenshots/ staged in ' + out + ' and dossier.json written.');
