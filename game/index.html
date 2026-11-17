@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lanternfall — Night of the Falling Lanterns</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #0b0f1e; overflow: hidden; }
+  body { display: flex; align-items: center; justify-content: center; }
+  #game {
+    display: block;
+    width: min(100vw, 177.78vh);
+    height: min(56.25vw, 100vh);
+    background: #141c33;
+    cursor: crosshair;
+    touch-action: none;
+  }
+  /* Read aloud, never shown: the status line screen readers announce. */
+  #status { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+</style>
+</head>
+<body>
+<canvas id="game" width="960" height="540" aria-label="Lanternfall: move with WASD or arrow keys, aim with the mouse, hold the mouse button or Space to fire light-seeds at the ember sprites. Survive eight waves until dawn."></canvas>
+<p id="status" role="status" aria-live="polite"></p>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
